@@ -49,12 +49,19 @@ namespace Infraestructure.Repository.Generics
 
         public async Task<List<T>> List()
         {
-            throw new NotImplementedException();
+            using (var data = new ContextBase(_OptionsBuilder))
+            {
+                return await data.Set<T>().AsNoTracking().ToListAsync();
+            }
         }
 
         public async Task Update(T Objeto)
         {
-            throw new NotImplementedException();
+            using (var data = new ContextBase(_OptionsBuilder))
+            {
+                data.Set<T>().Update(Objeto);
+                await data.SaveChangesAsync();
+            }
         }
 
         #region Disposed https://docs.microsoft.com/pt-br/dotnet/standard/garbage-collection/implementing-dispose
