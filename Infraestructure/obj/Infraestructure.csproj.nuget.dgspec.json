@@ -27,11 +27,7 @@
         "frameworks": {
           "net5.0": {
             "targetAlias": "net5.0",
-            "projectReferences": {
-              "C:\\Users\\jarde\\source\\repos\\EcommerceDDD\\Entities\\Entities.csproj": {
-                "projectPath": "C:\\Users\\jarde\\source\\repos\\EcommerceDDD\\Entities\\Entities.csproj"
-              }
-            }
+            "projectReferences": {}
           }
         },
         "warningProperties": {
